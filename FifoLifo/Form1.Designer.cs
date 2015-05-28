@@ -28,12 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.fifoButton = new System.Windows.Forms.Button();
+            this.lifoButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // fifoButton
+            // 
+            this.fifoButton.Location = new System.Drawing.Point(13, 13);
+            this.fifoButton.Name = "fifoButton";
+            this.fifoButton.Size = new System.Drawing.Size(118, 23);
+            this.fifoButton.TabIndex = 0;
+            this.fifoButton.Text = "A Queue is FIFO";
+            this.fifoButton.UseVisualStyleBackColor = true;
+            this.fifoButton.Click += new System.EventHandler(this.fifoButton_Click);
+            // 
+            // lifoButton
+            // 
+            this.lifoButton.Location = new System.Drawing.Point(13, 54);
+            this.lifoButton.Name = "lifoButton";
+            this.lifoButton.Size = new System.Drawing.Size(118, 23);
+            this.lifoButton.TabIndex = 1;
+            this.lifoButton.Text = "A Stack is LIFO";
+            this.lifoButton.UseVisualStyleBackColor = true;
+            this.lifoButton.Click += new System.EventHandler(this.lifoButton_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.lifoButton);
+            this.Controls.Add(this.fifoButton);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Form1";
+            this.Text = "Fifo Lifo";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button fifoButton;
+        private System.Windows.Forms.Button lifoButton;
     }
 }
 
