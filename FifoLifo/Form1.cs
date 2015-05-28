@@ -54,5 +54,20 @@ namespace FifoLifo
             + "Count before Clear() was " + howMany + "\n"
             + "Count after Clear() is now " + myStack.Count);
         }
+
+        private void queueStackList_Click(object sender, EventArgs e)
+        {
+            Stack<string> myStack = new Stack<string>();
+            myStack.Push("first in line");
+            myStack.Push("second in line");
+            myStack.Push("third in line");
+            myStack.Push("last in line");
+            Queue<string> myQueue = new Queue<string>(myStack);
+            List<string> myList = new List<string>(myQueue);
+            Stack<string> anotherStack = new Stack<string>(myList);
+            MessageBox.Show("myQueue has " + myQueue.Count + " items\n"
+            + "myList has " + myList.Count + " items\n"
+            + "anotherStack has " + anotherStack.Count + " items\n");
+        }
     }
 }

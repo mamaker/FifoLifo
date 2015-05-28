@@ -30,6 +30,7 @@
         {
             this.fifoButton = new System.Windows.Forms.Button();
             this.lifoButton = new System.Windows.Forms.Button();
+            this.queueStackList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fifoButton
@@ -52,11 +53,22 @@
             this.lifoButton.UseVisualStyleBackColor = true;
             this.lifoButton.Click += new System.EventHandler(this.lifoButton_Click);
             // 
+            // queueStackList
+            // 
+            this.queueStackList.Location = new System.Drawing.Point(13, 96);
+            this.queueStackList.Name = "queueStackList";
+            this.queueStackList.Size = new System.Drawing.Size(118, 23);
+            this.queueStackList.TabIndex = 2;
+            this.queueStackList.Text = "Queue Stack List";
+            this.queueStackList.UseVisualStyleBackColor = true;
+            this.queueStackList.Click += new System.EventHandler(this.queueStackList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.queueStackList);
             this.Controls.Add(this.lifoButton);
             this.Controls.Add(this.fifoButton);
             this.MaximizeBox = false;
@@ -71,6 +83,7 @@
 
         private System.Windows.Forms.Button fifoButton;
         private System.Windows.Forms.Button lifoButton;
+        private System.Windows.Forms.Button queueStackList;
     }
 }
 
